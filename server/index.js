@@ -9,6 +9,21 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://shubhlingayat2003:A66dvfjXUtX6Dv3x@ballrcluster.j2rx8up.mongodb.net/employee");
 
+app.post("/login", (req, res) => {
+    const {email,password} = req.body;
+    EmployeeModel.findOne({email : email})
+    .then(user => {
+        if(user){
+            if(user.password === password){
+                res.json("Success");
+            }else{
+                res.json("The password is incorrect");
+            }
+        }else{
+            res.json("Your name is Not register DO registration")
+        }
+    })
+})
 
 app.post('/register', (req, res) => {
     EmployeeModel.create(req.body)

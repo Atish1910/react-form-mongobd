@@ -14,8 +14,6 @@ function Signup(){
     .then(result => {console.log(result) 
       navigate('/login')
     } )
-      
-    
     .catch(err => console.log(err));
   }
   return(
@@ -26,9 +24,9 @@ function Signup(){
             <div className="row justify-content-center">
               <div className="col-lg-6 border py-5 mt-5 rounded-3">
                 <form onSubmit={handleSubmit}>
-                  <input type="text" placeholder="Enter your name" name="name" onChange={(e) => setName(e.target.value)} className="form-control mb-3" />
-                  <input type="email" placeholder="email"  name="email" onChange={(e) => setEmail(e.target.value)} className="form-control mb-3" />
-                  <input type="password" placeholder="password"  name="password" onChange={(e) => setPassword(e.target.value)} className="form-control mb-3" />
+                  <input type="text" placeholder="Enter your name" name="name" onChange={(e) => setName(e.target.value)} className="form-control mb-3" required />
+                  <input type="email" placeholder="email"  name="email" onChange={(e) => setEmail(e.target.value)} className="form-control mb-3" required />
+                  <input type="password" placeholder="password"  name="password" onChange={(e) => setPassword(e.target.value)} className="form-control mb-3" required />
                   <div className="">
                     <button className="btn btn-warning" type="submit">Submit</button>
                   </div>

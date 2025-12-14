@@ -35,6 +35,26 @@ function Login(){
                     <Link to='/register' className="btn btn-success" >Register</Link>
               </div>
             </div>
+            <div className="row">
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Atihs</td>
+                      <td>atish@gmail.com</td>
+                      <td>1234</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
     </>
